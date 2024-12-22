@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softy Pinko</title>
+    <!-- Agregar aquí otros enlaces CSS si es necesario -->
+</head>
+<body>
+    <!-- Contenido previo (puede incluir encabezados, menús, etc.) -->
+
+    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+        <!-- Nuevo H1 para contenido dinámico -->
+        <h1 id="dynamic-content"></h1>
+        <h1>We provide the best <strong>strategy</strong><br>to grow up your<strong>business</strong></h1>
+        <a href="#features" class="main-button-slider">Discover More</a>
+    </div>
+
+    <!-- Contenido posterior (puede incluir secciones adicionales, pie de página, etc.) -->
+
+    <!-- Agregar aquí otros scripts si es necesario -->
+
+    <!-- Script para cargar contenido dinámico desde el back-end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Cargar datos dinámicos desde el back-end en el puerto 5252
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:5252/api/hello",
+                success: function(data) {
+                    console.log(data);
+                    $('#dynamic-content').text(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
